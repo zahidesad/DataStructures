@@ -71,9 +71,6 @@ public class SLinkedList {
         }
     }
 
-    //CASE STUDY
-   
-
     public void displayList() {
         Node currentNode = head;
         while (currentNode != null) {
