@@ -80,4 +80,25 @@ public class SLinkedList {
         System.out.println();
     }
 
+    public static int countOddIterative(Node node) {
+        int count = 0;
+        while (node != null) {
+            if (node.data % 2 != 0) {
+                count++;
+            }
+            node = node.next;
+        }
+        return count;
+    }
+
+    public static int countOddRecurisive(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.data % 2 == 0) {
+            return 1 + countOddRecurisive(node.next);
+        }
+        return countOddRecurisive(node.next);
+    }
+
 }
