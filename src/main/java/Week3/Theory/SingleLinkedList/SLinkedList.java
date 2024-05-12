@@ -90,7 +90,7 @@ public class SLinkedList {
         }
         return count;
     }
-
+    
     public static int countOddRecurisive(Node node) {
         if (node == null) {
             return 0;

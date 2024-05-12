@@ -25,7 +25,7 @@ public class Queue<T> {
         dataArray[rear] = data;
         rear++;
         size++;
-
+        
         if (rear % dataArray.length == 0) {
             rear = 0;
         }

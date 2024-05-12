@@ -18,21 +18,19 @@ public class Queue<T> {
             rear.next = newNode;
             rear = newNode;
         }
-        rear.next = front;
         size++;
     }
 
     public T dequeue() {
-        if (front == null) {
+        if (isEmpty()) {
             System.out.println("Empty queue ");
             return null;
         } else {
             T temp = front.data;
             front = front.next;
-            if (front == null) {
+            if (isEmpty()) {
                 rear = null;
             }
-            rear.next = front;
             size--;
             return temp;
         }
